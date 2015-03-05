@@ -63,7 +63,7 @@ have_library: checking for PQconnectdb() in -lpq... -------------------- no
 ld: warning: ignoring file /Applications/Postgres.app/Contents/Versions/9.4/lib/libpq.dylib, file was built for x86_64 which is not the architecture being linked (i386): /Applications/Postgres.app/Contents/Versions/9.4/lib/libpq.dylib
 Undefined symbols for architecture i386:
   "_PQconnectdb", referenced from:
-      _t in conftest-f00461.o
+      _t in conftest-d9e4f9.o
 ld: symbol(s) not found for architecture i386
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
