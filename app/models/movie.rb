@@ -13,7 +13,7 @@
 #
 
 class Movie < ActiveRecord::Base
-  attr_accessor :theater_id, :name, :avatar
+
   belongs_to :theater
   mount_uploader :avatar, AvatarUploader
 end

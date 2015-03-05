@@ -10,7 +10,7 @@ gem 'carrierwave'
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
-
+gem "mini_magick"
 
 
 
