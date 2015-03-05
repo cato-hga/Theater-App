@@ -8,8 +8,8 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  theater_id      :integer
-#  theater         :string
 #  currentviewings :string
+#  avatar          :string
 #
 
 require 'test_helper'

@@ -1,9 +1,20 @@
 source 'https://rubygems.org'
 
-gem 'faker'
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+
+
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
+
+gem 'carrierwave'
+
+gem 'faker'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+
+
+
+
+
+
 gem 'sqlite3', '1.3.10'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -49,6 +60,8 @@ group :development, :test do
 
   # User the 'thin' server instead of the default webrick
   gem 'thin'
+
+
 
   # Use postgres and the Heroku rails gem for Heroku
   group :production do

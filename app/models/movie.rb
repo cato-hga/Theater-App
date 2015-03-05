@@ -8,10 +8,12 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  theater_id      :integer
-#  theater         :string
 #  currentviewings :string
+#  avatar          :string
 #
 
 class Movie < ActiveRecord::Base
+  attr_accessor :theater_id, :name, :avatar
   belongs_to :theater
+  mount_uploader :avatar, AvatarUploader
 end
