@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150304185122) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "movies", force: :cascade do |t|
     t.string   "name"
     t.string   "rating"
@@ -23,7 +26,7 @@ ActiveRecord::Schema.define(version: 20150304185122) do
     t.string   "avatar"
   end
 
-  add_index "movies", ["theater_id"], name: "index_movies_on_theater_id"
+  add_index "movies", ["theater_id"], name: "index_movies_on_theater_id", using: :btree
 
   create_table "theaters", force: :cascade do |t|
     t.string   "name"
@@ -40,6 +43,8 @@ ActiveRecord::Schema.define(version: 20150304185122) do
     t.integer  "movie_id"
   end
 
-  add_index "viewers", ["movie_id"], name: "index_viewers_on_movie_id"
+  add_index "viewers", ["movie_id"], name: "index_viewers_on_movie_id", using: :btree
 
+  add_foreign_key "movies", "theaters"
+  add_foreign_key "viewers", "movies"
 end

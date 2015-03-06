@@ -12,6 +12,10 @@ gem 'faker'
 
 gem "mini_magick"
 
+gem 'fog'
+
+
+
 
 
 
@@ -44,6 +48,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+
+  # User the 'thin' server instead of the default webrick
 gem 'thin'
 
 
@@ -65,8 +72,9 @@ group :development, :test do
 
   gem 'annotate', '~> 2.6.5'
 
+  gem 'dotenv-rails'
 
-  # User the 'thin' server instead of the default webrick
+
 
 
 end
