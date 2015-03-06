@@ -15,8 +15,9 @@
 
     <%= form_for @movie, html: { multipart: true } do |f| %>
   <div>
-    <%= f.file_field :avatar %>
-    <%= image_tag(@movie.avatar_url(:thumb)) %>
+
+    <%= f.text_field :avatar %>
+    <%= image_tag(@movie.avatar_url) %>
   </div>
   <div class="field">
     <%= f.label :name %><br>
