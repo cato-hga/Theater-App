@@ -23,6 +23,16 @@
     <%= f.label :address %><br>
     <%= f.text_field :address %>
   </div>
+
+
+  <div class="field">
+    <%= hidden_field_tag "theater[movie_ids][]", nil %>
+    <% Movie.all.each do |movie| %>
+      <%= check_box_tag "theater[movie_ids][]", movie.id, @theater.movie_ids.include?(movie.id) %>
+      <%= movie.name %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

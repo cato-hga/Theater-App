@@ -15,5 +15,14 @@
   <%= @theater.address %>
 </p>
 
+<p>
+  <strong>Movies</strong>
+  <ul>
+    <% @theater.movies.each do |movie| %>
+      <li><%= movie.name %></li>
+    <% end %>
+  </ul>
+</p>
+
 <%= link_to 'Edit', edit_theater_path(@theater) %> |
 <%= link_to 'Back', theaters_path %>

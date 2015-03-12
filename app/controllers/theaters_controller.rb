@@ -10,6 +10,7 @@ class TheatersController < ApplicationController
   # GET /theaters/1
   # GET /theaters/1.json
   def show
+
   end
 
   # GET /theaters/new
@@ -69,6 +70,6 @@ class TheatersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def theater_params
-      params.require(:theater).permit(:name, :location, :address)
+      params.require(:theater).permit(:name, :location, :address, :theater_id, :movie_ids => [])
     end
 end

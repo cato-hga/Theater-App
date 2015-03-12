@@ -16,4 +16,9 @@ class Movie < ActiveRecord::Base
 
   belongs_to :theater
   mount_uploader :avatar, AvatarUploader
+
+# Validators
+  validates :name, presence: true
+  validates :rating, presence: true
+  validates :currentviewings, presence: true
 end
