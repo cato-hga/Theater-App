@@ -10,7 +10,7 @@ helper_method :current_user, :signed_in?
 
 def current_user
 
-  @current_user ||= User.find_by(name:'Hello Guest')
+  @current_user ||= User.find_by(name:'John')
 end
 
 def signed_in?
