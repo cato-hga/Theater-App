@@ -5,6 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
 Movie.destroy_all
 
 3.times do
@@ -26,5 +29,6 @@ Theater.destroy_all
                               address: Faker::Address.street_address,
               )
 
-
 end
+
+ User.create!(name: "Hello Guest")
