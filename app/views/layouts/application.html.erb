@@ -14,13 +14,14 @@
   <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
+  <div>
+  <% if signed_in? %>
+          <p class="navbar-text navbar-right">Signed in as <%= link_to current_user.name %></p>
+        <% end %>
+  </div>
 <%= yield %>
 
 
-<% if signed_in? %>
-        <p class="navbar-text navbar-left">Signed in as <%= link_to current_user.name %></p>
-      <% end %>
 
 </body>
 </html>

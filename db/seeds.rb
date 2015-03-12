@@ -31,4 +31,4 @@ Theater.destroy_all
 
 end
 
- User.create!(name: "Hello Guest")
+ User.create!(name: "Guest")
