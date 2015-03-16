@@ -5,6 +5,8 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
     @movies = Movie.all
+    logger.debug "How Many Movies: #{@movies.size}"
+    logger.debug @movies.inspect
   end
 
   # GET /movies/1
